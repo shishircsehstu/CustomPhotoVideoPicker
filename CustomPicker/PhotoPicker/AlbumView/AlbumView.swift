@@ -2,7 +2,7 @@
 //  AlbumView.swift
 //  CustomPicker
 //
-//  Created by Saddam Hossain on 11/19/21.
+//  Created by Md. Saddam Hossain on 11/19/21.
  // saddam.cse14@gmail.com
 //
 
