@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Selected Image View Controller-->
+        <scene sceneID="ybR-jw-nYY">
+            <objects>
+                <viewController storyboardIdentifier="SelectedImageViewController" id="R0w-AM-Vzl" customClass="SelectedImageViewController" customModule="CustomPicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3FA-MR-bJ2"/>
+                        <viewControllerLayoutGuide type="bottom" id="lhT-yJ-8PE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="m1c-Lr-zaK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nuv-zB-VQH">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="62"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your selected photos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7XL-JN-K9E">
+                                        <rect key="frame" x="95" y="28" width="185" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IjM-5N-efg">
+                                        <rect key="frame" x="10" y="27" width="53" height="30"/>
+                                        <state key="normal" title="&lt;&lt;Back">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="backBtnAction:" destination="R0w-AM-Vzl" eventType="touchUpInside" id="xHn-bp-Uh4"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="7XL-JN-K9E" secondAttribute="bottom" constant="10" id="9XG-ci-8oM"/>
+                                    <constraint firstAttribute="bottom" secondItem="IjM-5N-efg" secondAttribute="bottom" constant="5" id="AeZ-MF-i7h"/>
+                                    <constraint firstItem="IjM-5N-efg" firstAttribute="leading" secondItem="Nuv-zB-VQH" secondAttribute="leading" constant="10" id="OXo-8k-vU5"/>
+                                    <constraint firstItem="7XL-JN-K9E" firstAttribute="centerX" secondItem="Nuv-zB-VQH" secondAttribute="centerX" id="Wyu-0o-FPh"/>
+                                </constraints>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="FNn-r6-FrG">
+                                <rect key="frame" x="0.0" y="62" width="375" height="605"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ocx-39-GDX">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="FNn-r6-FrG" firstAttribute="leading" secondItem="m1c-Lr-zaK" secondAttribute="leading" id="9x7-bN-TVg"/>
+                            <constraint firstItem="Nuv-zB-VQH" firstAttribute="leading" secondItem="m1c-Lr-zaK" secondAttribute="leading" id="JB3-Xa-Zec"/>
+                            <constraint firstAttribute="trailing" secondItem="FNn-r6-FrG" secondAttribute="trailing" id="Jxr-Ga-FzK"/>
+                            <constraint firstAttribute="bottom" secondItem="FNn-r6-FrG" secondAttribute="bottom" id="RhQ-qD-GPc"/>
+                            <constraint firstAttribute="trailing" secondItem="Nuv-zB-VQH" secondAttribute="trailing" id="UTo-qv-6vk"/>
+                            <constraint firstItem="Nuv-zB-VQH" firstAttribute="height" secondItem="m1c-Lr-zaK" secondAttribute="height" multiplier="0.0929535" id="jOn-X0-0dq"/>
+                            <constraint firstItem="Nuv-zB-VQH" firstAttribute="top" secondItem="m1c-Lr-zaK" secondAttribute="top" id="t7r-wz-Kqj"/>
+                            <constraint firstItem="FNn-r6-FrG" firstAttribute="top" secondItem="Nuv-zB-VQH" secondAttribute="bottom" id="vcH-8d-qAg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="selectedImageCollectionView" destination="FNn-r6-FrG" id="XgM-2i-l4j"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Y0-FM-ccA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-298.39999999999998" y="481.70914542728639"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
