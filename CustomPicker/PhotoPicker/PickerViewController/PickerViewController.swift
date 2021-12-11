@@ -80,8 +80,6 @@ class PickerViewController: UIViewController {
         let DEVICE_WIDTH = UIScreen.main.bounds.size.width
         
         progressContainerView.frame = view.bounds
-        //  progressContainerView.backgroundColor =
-        //NAVBAR_BAR_TINT_COLOR.withAlphaComponent(0.5)
         let progH = 140
         let progW = 240
         
@@ -130,6 +128,7 @@ class PickerViewController: UIViewController {
             albumView.commonInit()
             albumView.isHidden = false
         }
+        
         //  albumView.commonInit()
         // albumView.isHidden = false
         
@@ -194,10 +193,7 @@ class PickerViewController: UIViewController {
             
             DispatchQueue.main.async {
                 if progress>=1{
-                    
                     completion(true)
-                    
-                    // self.finalAssets.append(asset)
                 }
             }
         }

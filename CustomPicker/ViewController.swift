@@ -29,6 +29,7 @@ class ViewController: UIViewController {
         present(pickerNavVC, animated: true, completion: nil)
     }
 }
+
 extension ViewController: PickerViewControllerDelegate{
     
     func getSelectedAssets(selectedAssets: [PHAsset]) {
