@@ -2,7 +2,8 @@
 //  AlbumView.swift
 //  CustomPicker
 //
-//  Created by Saddam on 11/19/21.
+//  Created by Saddam Hossain on 11/19/21.
+ // saddam.cse14@gmail.com
 //
 
 import Foundation
