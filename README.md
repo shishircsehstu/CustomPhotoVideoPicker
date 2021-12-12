@@ -29,3 +29,7 @@
     }
 
 ```
+For picking only image use
+```
+Assets.share.supportedMediaTypes = [.image]
+```
